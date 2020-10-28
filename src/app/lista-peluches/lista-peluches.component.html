@@ -1,1 +1,35 @@
-<p>lista-peluches works!</p>
+<h1>Lista de peluches</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Imagen</th>
+            <th>Nombre</th>
+            <th>Material</th>
+            <th>Precio</th>
+            <th>Stock</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><img [src]="peluche1.imagen" [alt]="peluche1.nombre"></td>
+            <td>{{peluche1.nombre}}</td>
+            <td>{{peluche1.material}}</td>
+            <td>{{peluche1.precio}}</td>
+            <td>{{peluche1.stock}}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Stitch</td>
+            <td>Felpa</td>
+            <td>456</td>
+            <td>11</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Yoda</td>
+            <td>Felpa</td>
+            <td>789</td>
+            <td>12</td>
+        </tr>
+    </tbody>
+</table>

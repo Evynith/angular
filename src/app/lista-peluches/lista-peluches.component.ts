@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaPeluchesComponent implements OnInit {
 
+  peluche1 = {
+    "nombre" : "Pulpito",
+    "material" : "felpa",
+    "precio" : 123,
+    "stock" : 10,
+    "imagen" : "assets/images/pulpito.jpg"
+  }
+
   constructor() { }
 
   ngOnInit(): void {
