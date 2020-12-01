@@ -1,0 +1,19 @@
+<h1>Carrito de compras</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let elemento of elementos">
+            <td>{{elemento.producto}}</td>
+            <td>{{elemento.precio}}</td>
+            <td>{{elemento.cantidad}}</td>
+        </tr>
+    </tbody>
+</table>
+<div>Total</div> <button>Pagar</button>
