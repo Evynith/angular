@@ -10,26 +10,12 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td><img [src]="peluche1.imagen" [alt]="peluche1.nombre"></td>
-            <td>{{peluche1.nombre}}</td>
-            <td>{{peluche1.material}}</td>
-            <td>{{peluche1.precio}}</td>
-            <td>{{peluche1.stock}}</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>Stitch</td>
-            <td>Felpa</td>
-            <td>456</td>
-            <td>11</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>Yoda</td>
-            <td>Felpa</td>
-            <td>789</td>
-            <td>12</td>
+        <tr *ngFor = "let peluche of peluches">
+            <td><img [src]="peluche.imagen" [alt]="peluche.nombre"></td>
+            <td>{{peluche.nombre}}</td>
+            <td>{{peluche.material}}</td>
+            <td>{{peluche.precio}}</td>
+            <td>{{peluche.stock}}</td>
         </tr>
     </tbody>
 </table>
