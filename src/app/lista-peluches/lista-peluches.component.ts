@@ -13,7 +13,7 @@ export class ListaPeluchesComponent implements OnInit {
     {
       nombre : "Pulpito",
       material : "felpa",
-      precio : 123,
+      precio : 123.33,
       stock : 0,
       imagen : "assets/images/pulpito.jpg",
       oferta : false,

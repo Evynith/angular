@@ -14,7 +14,7 @@
             <td><img [src]="peluche.imagen" [alt]="peluche.nombre"></td>
             <td>{{peluche.nombre}}</td>
             <td>{{peluche.material}}</td>
-            <td>{{peluche.precio}}</td>
+            <td>{{peluche.precio | currency}}</td>
             <td *ngIf = "peluche.stock != 0; else stockElse">{{peluche.stock}}</td>
             <ng-template #stockElse ><td>Sin stock</td></ng-template>
             
