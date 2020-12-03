@@ -4,4 +4,5 @@ export interface peluches{
     precio : number;
     stock : number;
     imagen : string;
+    oferta : boolean;
 }

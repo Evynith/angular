@@ -14,22 +14,25 @@ export class ListaPeluchesComponent implements OnInit {
       nombre : "Pulpito",
       material : "felpa",
       precio : 123,
-      stock : 10,
-      imagen : "assets/images/pulpito.jpg"
+      stock : 0,
+      imagen : "assets/images/pulpito.jpg",
+      oferta : false,
     },
     {
       nombre : "Stitch",
       material : "felpa",
       precio : 456,
       stock : 11,
-      imagen : "assets/images/stitch.webp"
+      imagen : "assets/images/stitch.webp",
+      oferta : true,
     },
     {
       nombre : "Yoda",
       material : "felpa",
       precio : 789,
       stock : 12,
-      imagen : "assets/images/yoda.jpeg"
+      imagen : "assets/images/yoda.jpeg",
+      oferta : false,
     }
   ];
   
