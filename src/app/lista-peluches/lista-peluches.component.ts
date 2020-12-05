@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CarritoPeluchesService } from '../carrito-peluches.service';
 import { peluches } from './peluches';
 
 @Component({
@@ -38,26 +39,20 @@ export class ListaPeluchesComponent implements OnInit {
       cuantificador : 0,
     }
   ];
-  
 
-  constructor() { }
+
+  constructor(private carrito: CarritoPeluchesService) {
+    
+   }
 
   ngOnInit(): void {
   }
 
-  bajarCuantificador(peluche: peluches): void {
-    if(peluche.cuantificador > 0)
-    peluche.cuantificador --;
+  maximoAlcanzado(m: string): void {
+    alert(m);
   }
 
-  subirCuantificador(peluche: peluches): void {
-    if (peluche.cuantificador < peluche.stock)
-    peluche.cuantificador ++;
-  }
-
-  cambiarCuantificador(event, peluche:peluches): void {
-    if(isNaN(event.key) || (peluche.cuantificador > peluche.stock ) || (event.key > peluche.stock) ){
-     //TODO: 
-    }
+  agregarAlCarro(peluche):void {
+    this.carrito.agregarAlCarro(peluche);
   }
 }

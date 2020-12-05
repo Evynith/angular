@@ -8,6 +8,7 @@ import { ListaPeluchesComponent } from './lista-peluches/lista-peluches.componen
 import { CarritoComponent } from './carrito/carrito.component';
 import { AboutComponent } from './about/about.component';
 import { PeluchesComponent } from './peluches/peluches.component';
+import { InputIntegerComponent } from './input-integer/input-integer.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { PeluchesComponent } from './peluches/peluches.component';
     ListaPeluchesComponent,
     CarritoComponent,
     AboutComponent,
-    PeluchesComponent
+    PeluchesComponent,
+    InputIntegerComponent
   ],
   imports: [
     BrowserModule,

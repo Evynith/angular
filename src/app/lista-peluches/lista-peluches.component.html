@@ -19,9 +19,7 @@
             <td *ngIf = "peluche.stock != 0; else stockElse">{{peluche.stock}}</td>
             <ng-template #stockElse ><td>Sin stock</td></ng-template>
             <td>
-                <button (click)= "bajarCuantificador(peluche)">-</button>
-                <input class="inputCantidad" type="text" [(ngModel)]= "peluche.cuantificador" (keyup)= "cambiarCuantificador($event, peluche.cuantificador)">
-                <button (click)= "subirCuantificador(peluche)">+</button>
+              <app-input-integer (maximoAlcanzado)="maximoAlcanzado($event)" [(cuantificador)]= "peluche.cuantificador" [max]= "peluche.stock" *ngIf= "peluche.stock"></app-input-integer>
             </td>
             
             <!-- <form>
