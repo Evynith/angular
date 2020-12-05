@@ -7,6 +7,7 @@
             <th>Material</th>
             <th>Precio</th>
             <th>Stock</th>
+            <th>Compra</th>
         </tr>
     </thead>
     <tbody>
@@ -17,8 +18,13 @@
             <td>{{peluche.precio | currency}}</td>
             <td *ngIf = "peluche.stock != 0; else stockElse">{{peluche.stock}}</td>
             <ng-template #stockElse ><td>Sin stock</td></ng-template>
+            <td>
+                <button (click)= "bajarCuantificador(peluche)">-</button>
+                <input class="inputCantidad" type="text" [(ngModel)]= "peluche.cuantificador" (keyup)= "cambiarCuantificador($event, peluche.cuantificador)">
+                <button (click)= "subirCuantificador(peluche)">+</button>
+            </td>
             
-            <form>
+            <!-- <form>
                 <div class="form-group">
                   <label for="elemento-cantidad">Cantidad</label>
                   <input type="number" class="form-control" id="elemento-cantidad" aria-describedby="emailHelp">
@@ -32,7 +38,7 @@
                     <label class="form-check-label" for="inlineCheckbox2">Verde</label>
                   </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
-              </form>
+              </form> -->
         </tr>
     </tbody>
 </table>
