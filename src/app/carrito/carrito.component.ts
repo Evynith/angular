@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable, observable } from 'rxjs';
 import { CarritoPeluchesService } from '../carrito-peluches.service';
+import { peluches } from '../lista-peluches/peluches';
 import {elementos} from './elementos';
 
 @Component({
@@ -9,17 +11,13 @@ import {elementos} from './elementos';
 })
 export class CarritoComponent implements OnInit {
 
+  carritoLista$: Observable<peluches[]>;
 
-  elementos : elementos[] = 
-  [
-    {
-      producto : "Pulpito",
-      precio : 123,
-      cantidad : 1
-    }
-  ];
 
-  constructor(private carrito: CarritoPeluchesService) { }
+  constructor(private carrito: CarritoPeluchesService) { 
+    // carrito.carritoLista.subscribe((observable)=> this.carritoLista = observable);
+    this.carritoLista$ = carrito.carritoLista.asObservable();
+  }
 
   ngOnInit(): void {
   }

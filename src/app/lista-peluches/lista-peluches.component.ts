@@ -54,5 +54,8 @@ export class ListaPeluchesComponent implements OnInit {
 
   agregarAlCarro(peluche):void {
     this.carrito.agregarAlCarro(peluche);
+    peluche.stock -= peluche.cuantificador;
+    peluche.cuantificador = 0;
+    //TODO: refreshStock();
   }
 }
