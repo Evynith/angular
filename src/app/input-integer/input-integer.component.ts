@@ -18,7 +18,7 @@ export class InputIntegerComponent implements OnInit {
   max: number;
 
   @Output()
-  cambioCuantificador: EventEmitter<number> = new EventEmitter<number>();
+  cuantificadorChange: EventEmitter<number> = new EventEmitter<number>();
 
   @Output()
   maximoAlcanzado: EventEmitter<String> = new EventEmitter<String>();
@@ -30,7 +30,7 @@ export class InputIntegerComponent implements OnInit {
     if(this.cuantificador > 0) {
       this.cuantificador --;
     }
-    this.cambioCuantificador.emit(this.cuantificador);
+    this.cuantificadorChange.emit(this.cuantificador);
   }
 
   subirCuantificador(): void {
@@ -39,7 +39,7 @@ export class InputIntegerComponent implements OnInit {
     } else {
       this.maximoAlcanzado.emit("se alcanzo el maximo");
     }
-    this.cambioCuantificador.emit(this.cuantificador);
+    this.cuantificadorChange.emit(this.cuantificador);
   }
 
   cambiarCuantificador(event): void {
@@ -47,7 +47,7 @@ export class InputIntegerComponent implements OnInit {
       //TODO: 
       this.cuantificador = 0;
     }
-    this.cambioCuantificador.emit(this.cuantificador);
+    this.cuantificadorChange.emit(this.cuantificador);
   }
 
 }

@@ -12,10 +12,13 @@ export class CarritoPeluchesService {
 
   constructor() { }
 
-  agregarAlCarro(peluche: Peluche) :void{
-    let item :Peluche = this._carritoLista.find((v1)=> v1.nombre == peluche.nombre);
-    if(!item){
-      this._carritoLista.push({... peluche});
+  agregarAlCarro(peluche: Peluche): void {
+    let item: Peluche = this._carritoLista.find((v1) => v1.nombre == peluche.nombre);
+    if (!item) {
+      const p = { ...peluche };
+      this._carritoLista.push(p);
+      // console.log(p);
+      // this._carritoLista.push({ ...peluche });
     } else {
       item.cuantificador += peluche.cuantificador;
     }
