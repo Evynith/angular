@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, observable } from 'rxjs';
 import { CarritoPeluchesService } from '../carrito-peluches.service';
-import { peluches } from '../lista-peluches/peluches';
-import {elementos} from './elementos';
+import { Peluche } from '../lista-peluches/Peluche';
+// import {elementos} from './elementos';
 
 @Component({
   selector: 'app-carrito',
@@ -11,15 +11,17 @@ import {elementos} from './elementos';
 })
 export class CarritoComponent implements OnInit {
 
-  carritoLista$: Observable<peluches[]>;
-
+  carritoLista$: Observable<Peluche[]>;
+// carritoLista: Peluche[] = [];
 
   constructor(private carrito: CarritoPeluchesService) { 
-    // carrito.carritoLista.subscribe((observable)=> this.carritoLista = observable);
+    // carrito.carritoLista.subscribe(observable => this.carritoLista = observable);
+    
     this.carritoLista$ = carrito.carritoLista.asObservable();
   }
 
   ngOnInit(): void {
+    
   }
 
 }

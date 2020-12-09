@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { peluches } from '../lista-peluches/peluches';
+import { Peluche } from '../lista-peluches/Peluche';
 
 @Component({
   selector: 'app-input-integer',
@@ -29,24 +29,25 @@ export class InputIntegerComponent implements OnInit {
   bajarCuantificador(): void {
     if(this.cuantificador > 0) {
       this.cuantificador --;
-      this.cambioCuantificador.emit(this.cuantificador);
     }
+    this.cambioCuantificador.emit(this.cuantificador);
   }
 
   subirCuantificador(): void {
     if (this.cuantificador < this.max){
       this.cuantificador ++;
-      this.cambioCuantificador.emit(this.cuantificador);
     } else {
       this.maximoAlcanzado.emit("se alcanzo el maximo");
     }
+    this.cambioCuantificador.emit(this.cuantificador);
   }
 
   cambiarCuantificador(event): void {
     if(isNaN(event.key) || (this.cuantificador > this.max ) || (event.key > this.max) ){
-      this.cambioCuantificador.emit(this.cuantificador);
-     //TODO: 
+      //TODO: 
+      this.cuantificador = 0;
     }
+    this.cambioCuantificador.emit(this.cuantificador);
   }
 
 }

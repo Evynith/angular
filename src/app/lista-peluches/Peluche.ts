@@ -1,4 +1,4 @@
-export interface peluches{
+export interface Peluche{
     nombre : string;
     material : string;
     precio : number;

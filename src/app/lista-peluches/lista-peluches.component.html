@@ -7,7 +7,7 @@
             <th>Material</th>
             <th>Precio</th>
             <th>Stock</th>
-            <th>Compra</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -20,7 +20,7 @@
             <ng-template #stockElse ><td>Sin stock</td></ng-template>
             <td>
               <app-input-integer (maximoAlcanzado)="maximoAlcanzado($event)" [(cuantificador)]= "peluche.cuantificador" [max]= "peluche.stock" *ngIf= "peluche.stock"></app-input-integer>
-              <button class="btn" (click)= "agregarAlCarro(peluche)">Comprar</button>
+              <button  *ngIf= "peluche.stock" class="btn" (click)= "agregarAlCarro(peluche)">Comprar</button>
             </td>
         </tr>
     </tbody>

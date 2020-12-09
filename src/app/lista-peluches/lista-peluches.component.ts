@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CarritoPeluchesService } from '../carrito-peluches.service';
-import { peluches } from './peluches';
+import { Peluche } from './Peluche';
 
 @Component({
   selector: 'app-lista-peluches',
@@ -9,7 +9,7 @@ import { peluches } from './peluches';
 })
 export class ListaPeluchesComponent implements OnInit {
 
-  peluches : peluches[] = 
+  peluches : Peluche[] = 
   [
     {
       nombre : "Pulpito",
@@ -46,6 +46,7 @@ export class ListaPeluchesComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    
   }
 
   maximoAlcanzado(m: string): void {

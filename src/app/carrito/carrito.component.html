@@ -1,8 +1,8 @@
 <h1>Carrito de compras</h1>
 
 <ul>
-    <li *ngFor= "let p of (carritoLista$ | async)">
-        {{p.nombre}}: {{p.cuantificador}}
+    <li *ngFor= "let peluche of (carritoLista$ | async)"> <!-- $ | async -->
+        {{peluche.nombre}}: {{peluche.cuantificador}}
        <!-- TODO:  si es 0 lo que compre no mostrar -->
     </li>
 </ul>

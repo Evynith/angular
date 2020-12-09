@@ -1,5 +1,5 @@
 <div class="input-group">
     <button (click)= "bajarCuantificador()">-</button>
-    <input class="inputCantidad" type="text" [(ngModel)]= "cuantificador" (keyup)= "cambiarCuantificador($event)">
+    <input class="inputCantidad" type="number" value="{{cuantificador}}" [(ngModel)]= "cuantificador" (keyup)= "cambiarCuantificador($event)">
     <button (click)= "subirCuantificador()">+</button>
   </div>
